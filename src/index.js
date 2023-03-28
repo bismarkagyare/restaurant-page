@@ -1,3 +1,6 @@
+import createHome from "./home";
+
+
 function createNavItem (text, url) {
   const navItem = document.createElement('li');
   const navLink = document.createElement('a');
@@ -24,9 +27,16 @@ function createNavbar() {
   navLinks.appendChild(createNavItem('contact', '#'));
   nav.appendChild(navLinks);
 
-  const content = document.getElementById('content');
-  content.appendChild(nav);
+  return nav;
 }
 
-createNavbar();
+function initWebsite() {
+  const navbar = createNavbar();
+  const homeSection = createHome();
 
+  const content = document.getElementById('content');
+  content.appendChild(navbar);
+  content.appendChild(homeSection);
+}
+
+initWebsite();
