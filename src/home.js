@@ -1,5 +1,5 @@
 function createHome () {
-  const homeContainer = document.createElement('div');
+  const homeContainer = document.createElement('main');
   homeContainer.classList.add('home-container');
 
   const homeHeading = document.createElement('h3');
@@ -11,6 +11,7 @@ function createHome () {
   homeParagraph.textContent = 'Check out our menu below';
 
   const homeImage = document.createElement('img');
+  homeImage.classList.add('home-img');
   homeImage.src = 'images/menu-profile.jpg';
   homeImage.alt = 'home-img';
 
