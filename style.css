@@ -123,3 +123,9 @@ ul {
 .fa-github {
   font-size: 1.5rem;
 }
+
+/* menu styles */
+
+.menu-container {
+  display: none;
+}
