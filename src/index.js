@@ -1,5 +1,5 @@
 import createHome from "./home";
-
+import createMenu from "./menu";
 
 function createNavItem (text, url) {
   const navItem = document.createElement('li');
@@ -51,11 +51,13 @@ function initWebsite() {
   const navbar = createNavbar();
   const homeSection = createHome();
   const footerSection = createFooter();
+  const menuSection = createMenu();
 
   const content = document.getElementById('content');
   content.appendChild(navbar);
   content.appendChild(homeSection);
   content.appendChild(footerSection);
+  content.appendChild(menuSection);
 }
 
 initWebsite();
