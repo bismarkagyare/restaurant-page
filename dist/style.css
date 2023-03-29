@@ -16,8 +16,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  font-size: 2rem;
-  font-family: 'Roboto', cursive;
+  font-size: 1.5rem;
+  font-family: 'Poppins', cursive;
   color: #fff;
 }
 
@@ -107,4 +107,19 @@ ul {
   padding: 8px 12px;
   transition: background-color 0.3s ease;
   text-transform: capitalize;
+}
+
+/* footer styles */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.fa-github {
+  font-size: 2rem;
 }

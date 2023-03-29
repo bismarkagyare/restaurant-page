@@ -30,13 +30,32 @@ function createNavbar() {
   return nav;
 }
 
+function createFooter() {
+  const footer = document.createElement('footer');
+  footer.classList.add('footer');
+
+  const currentYear = new Date().getFullYear();
+  const name = 'Bismark Agyare';
+  const githubUrl = 'https://github.com/bismarkagyare';
+
+  const footerContent = document.createElement('div');
+  footerContent.innerHTML = `&copy; ${currentYear} ${name}. All rights reserved.
+  <a href="${githubUrl}" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+  </a>`
+  footer.appendChild(footerContent);
+  return footer;
+}
+
 function initWebsite() {
   const navbar = createNavbar();
   const homeSection = createHome();
+  const footerSection = createFooter();
 
   const content = document.getElementById('content');
   content.appendChild(navbar);
   content.appendChild(homeSection);
+  content.appendChild(footerSection);
 }
 
 initWebsite();
