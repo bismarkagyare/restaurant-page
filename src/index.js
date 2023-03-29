@@ -39,7 +39,7 @@ function createFooter() {
   const githubUrl = 'https://github.com/bismarkagyare';
 
   const footerContent = document.createElement('div');
-  footerContent.innerHTML = `&copy; ${currentYear} ${name}. All rights reserved.
+  footerContent.innerHTML = `&copy; ${currentYear} ${name}
   <a href="${githubUrl}" target="_blank" rel="noopener noreferrer">
     <i class="fab fa-github"></i>
   </a>`
