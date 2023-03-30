@@ -53,11 +53,37 @@ function initWebsite() {
   const footerSection = createFooter();
   const menuSection = createMenu();
 
+  const btns = document.querySelectorAll('.nav-link');
+  btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (e.target.textContent === 'home') {
+        document.querySelector('.home-container').textContent = homeSection;
+      } else if (e.target.textContent ===  'menu') {
+        document.querySelector('.home-container').textContent = menuSection;
+      }
+    });
+  });
+
   const content = document.getElementById('content');
   content.appendChild(navbar);
   content.appendChild(homeSection);
   content.appendChild(footerSection);
   content.appendChild(menuSection);
+
+  
 }
+
+// function renderMenu() {
+//   const btns = document.querySelectorAll('.nav-link');
+//   btns.forEach(btn => {
+//     btn.addEventListener('click', (e) => {
+//       if (e.target.textContent === 'home') {
+//         document.querySelector('.home-container').textContent = homeSection;
+//       } else if (e.target.textContent ===  'menu') {
+//         document.querySelector('.home-container').textContent = menuSection;
+//       }
+//     });
+//   });
+// }
 
 initWebsite();
