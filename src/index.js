@@ -1,12 +1,13 @@
 import createHome from "./home";
 import createMenu from "./menu";
 
-function createNavItem (text, url) {
+function createNavItem (text, url, id) {
   const navItem = document.createElement('li');
   const navLink = document.createElement('a');
   navLink.textContent = text;
   navLink.href = url;
   navLink.classList.add('nav-link');
+  navLink.addEventListener('click', () => switchSection(id));
   navItem.appendChild(navLink);
   return navItem;
 }
@@ -22,9 +23,9 @@ function createNavbar() {
 
   const navLinks = document.createElement('ul');
   navLinks.classList.add('nav-links');
-  navLinks.appendChild(createNavItem('home', '#'));
-  navLinks.appendChild(createNavItem('menu', '#'));
-  navLinks.appendChild(createNavItem('contact', '#'));
+  navLinks.appendChild(createNavItem('home', '#', 'home'));
+  navLinks.appendChild(createNavItem('menu', '#', 'menu'));
+  navLinks.appendChild(createNavItem('contact', '#', 'contact'));
   nav.appendChild(navLinks);
 
   return nav;
@@ -47,43 +48,36 @@ function createFooter() {
   return footer;
 }
 
+function switchSection(id) {
+  const homeSection = document.getElementById('home');
+  const menuSection = document.getElementById('menu');
+  const menuContainer = document.querySelector('.menu-container');
+
+  if (id === 'home') {
+    homeSection.style.display = 'block';
+    menuSection.style.display = 'none';
+    //menuContainer.classList.add('hide-container');
+  } else if (id === 'menu') {
+    homeSection.style.display = 'none';
+    menuSection.style.display = 'block';
+    menuContainer.classList.remove('hide-container');
+  }
+}
+
+
 function initWebsite() {
   const navbar = createNavbar();
   const homeSection = createHome();
+  homeSection.setAttribute('id', 'home'); // add ID to home section
   const footerSection = createFooter();
   const menuSection = createMenu();
-
-  const btns = document.querySelectorAll('.nav-link');
-  btns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      if (e.target.textContent === 'home') {
-        document.querySelector('.home-container').textContent = homeSection;
-      } else if (e.target.textContent ===  'menu') {
-        document.querySelector('.home-container').textContent = menuSection;
-      }
-    });
-  });
+  menuSection.setAttribute('id', 'menu'); // add ID to menu section
 
   const content = document.getElementById('content');
   content.appendChild(navbar);
   content.appendChild(homeSection);
   content.appendChild(footerSection);
   content.appendChild(menuSection);
-
-  
 }
-
-// function renderMenu() {
-//   const btns = document.querySelectorAll('.nav-link');
-//   btns.forEach(btn => {
-//     btn.addEventListener('click', (e) => {
-//       if (e.target.textContent === 'home') {
-//         document.querySelector('.home-container').textContent = homeSection;
-//       } else if (e.target.textContent ===  'menu') {
-//         document.querySelector('.home-container').textContent = menuSection;
-//       }
-//     });
-//   });
-// }
 
 initWebsite();
