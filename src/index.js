@@ -1,5 +1,5 @@
 import createHome from "./home";
-import createMenu from "./menu";
+import createMenuWrapper from "./menu";
 
 function createNavItem (text, url, id) {
   const navItem = document.createElement('li');
@@ -51,16 +51,16 @@ function createFooter() {
 function switchSection(id) {
   const homeSection = document.getElementById('home');
   const menuSection = document.getElementById('menu');
-  const menuContainer = document.querySelector('.menu-container');
+  //const menuContainer = document.querySelector('.menu-container');
 
   if (id === 'home') {
     homeSection.style.display = 'block';
     menuSection.style.display = 'none';
-    //menuContainer.classList.add('hide-container');
+    //menuContainer.hidden = true;
   } else if (id === 'menu') {
     homeSection.style.display = 'none';
     menuSection.style.display = 'block';
-    menuContainer.classList.remove('hide-container');
+    //menuContainer.classList.remove('hide-container');`
   }
 }
 
@@ -69,15 +69,15 @@ function initWebsite() {
   const navbar = createNavbar();
   const homeSection = createHome();
   homeSection.setAttribute('id', 'home'); // add ID to home section
-  const footerSection = createFooter();
-  const menuSection = createMenu();
+  const menuSection = createMenuWrapper();
   menuSection.setAttribute('id', 'menu'); // add ID to menu section
+  const footerSection = createFooter();
 
   const content = document.getElementById('content');
   content.appendChild(navbar);
   content.appendChild(homeSection);
-  content.appendChild(footerSection);
   content.appendChild(menuSection);
+  content.appendChild(footerSection);
 }
 
 initWebsite();
