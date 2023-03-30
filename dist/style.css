@@ -136,7 +136,7 @@ ul {
 /* menu styles */
 
 .hide-container {
-  display: none !important;
+  display: none;
 }
 
 .menu-container {
