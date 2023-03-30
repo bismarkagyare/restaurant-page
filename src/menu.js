@@ -1,59 +1,59 @@
 function createMenu() {
   const menuContainer = document.createElement('div');
-  menuContainer.classList.add('menu-container');
+  menuContainer.classList.add('menu-container', 'hide-container');
 
   const menuItems = [
     {
-      imageSrc: 'images/menus/breakfast1.jpg',
+      imageSrc: 'images/menus/dinner1.jpg',
       imageAlt: 'toasted grapy bread',
       title: 'Toasted Grapy Bread',
       price: '$15.99',
       text: 'Ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.',
     },
     {
-      imageSrc: 'images/menus/breakfast2.jpg',
+      imageSrc: 'images/menus/supper2.jpg',
       imageAlt: 'strawberry pancakes',
       title: 'Strawberry Pancakes',
       price: '$5.99',
       text: 'Sustainable ethical small batch everyday carry semiotics swag blue bottle fingerstache.',
     },
     {
-      imageSrc: 'images/menus/dinner1.jpg',
+      imageSrc: 'images/menus/supper2.jpg',
       imageAlt: 'vegetable rice',
       title: 'Vegetable Rice',
       price: '$11.99',
       text: 'Ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.',
     },
     {
-      imageSrc: 'images/menus/dinner2.jpg',
+      imageSrc: 'images/menus/dinner1.jpg',
       imageAlt: 'salmon crispy',
       title: 'Salmon Crispy',
       price: '$10.99',
       text: 'Sustainable ethical small batch everyday carry semiotics swag blue bottle fingerstache.',
     },
     {
-      imageSrc: 'images/menus/lunch1.jpg',
+      imageSrc: 'images/menus/dinner1.jpg',
       imageAlt: 'dinner double',
       title: 'Dinner Double',
       price: '$7.99',
       text: 'Ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.',
     },
     {
-      imageSrc: 'images/menus/lunch2.jpg',
+      imageSrc: 'images/menus/supper2.jpg',
       imageAlt: 'tomato steak',
       title: 'Tomato Steak',
       price: '$19.99',
       text: 'Ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.',
     },
     {
-      imageSrc: 'images/menus/supper1.jpg',
+      imageSrc: 'images/menus/supper2.jpg',
       imageAlt: 'country delight',
       title: 'Country Delight',
       price: '$12.99',
       text: 'Sustainable ethical small batch everyday carry semiotics swag blue bottle fingerstache.',
     },
     {
-      imageSrc: 'images/menus/supper2.jpg',
+      imageSrc: 'images/menus/dinner1.jpg',
       imageAlt: 'classic pizza',
       title: 'Classic Pizza',
       price: '$15.99',
