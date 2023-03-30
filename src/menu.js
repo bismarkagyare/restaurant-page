@@ -1,6 +1,6 @@
 function createMenu() {
   const menuContainer = document.createElement('div');
-  menuContainer.classList.add('menu-container', 'hide-container');
+  menuContainer.classList.add('menu-container');
 
   const menuItems = [
     {
@@ -8,7 +8,7 @@ function createMenu() {
       imageAlt: 'toasted grapy bread',
       title: 'Toasted Grapy Bread',
       price: '$15.99',
-      text: 'Ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.',
+      text: 'Ombucha chillwave fanny pack 3 wolf moon street art photo booth.',
     },
     {
       imageSrc: 'images/menus/supper2.jpg',
@@ -97,5 +97,11 @@ function createMenu() {
   return menuContainer;
 }
 
+function createMenuWrapper() {
+  const menuWrapper = document.createElement("div");
+  menuWrapper.classList.add("hide-container"); // add hide-container class
+  menuWrapper.appendChild(createMenu());
+  return menuWrapper;
+}
 
-export default createMenu;
+export default createMenuWrapper;
