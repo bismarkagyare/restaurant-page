@@ -43,3 +43,11 @@ function createContact() {
   return contactContainer;
 }
 
+function createContactWrapper() {
+  const contactWrapper = document.createElement('div');
+  contactWrapper.classList.add('hide-contact');
+  contactWrapper.appendChild(createContact());
+  return contactWrapper;
+}
+
+export default createContactWrapper;
