@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
 :root {
   --clr-gold: #c59d5f;
@@ -59,15 +58,16 @@ ul {
 }
 
 .nav-link {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-style: italic;
-  font-family: 'Roboto', cursive;
+  font-family: 'Tangerine';
+  font-weight: 500;
 }
 
 .restaurant-name {
-  font-family: 'Righteous';
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-family: 'Tangerine';
+  font-size: 7rem;
+  font-weight: bolder;
   margin-right: 20px;
 }
 
@@ -81,21 +81,21 @@ ul {
 
 .home-heading {
   font-size: 3rem;
-  font-weight: 700;
-  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-family: 'Poppins', cursive;
 }
 
 .home-paragraph {
   font-size: 2rem;
-  font-weight: 500;
-  font-family: 'Righteous', cursive;
+  font-weight: 300;
+  font-family: 'Poppins', cursive;
 }
 
 .home-img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 500px;
+  width: 600px;
   height: 400px;
   margin-top: 10px;
 }
@@ -186,4 +186,41 @@ ul {
 .menu-text {
   margin-bottom: 0;
   padding-top: 1rem;
+}
+
+/* contact styles */
+
+.hide-contact {
+  display: none;
+}
+
+.contact-container {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-location-container, 
+.fa-calendar-container,
+.fa-phone-container {
+  display: flex;
+  width: 400px;
+  gap: 1rem;
+  font-size: 1.6rem;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.map-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 600px;
+  height: 400px;
+  margin-top: 1.4rem;
+  margin-bottom: 3.5rem;
 }
