@@ -8,7 +8,7 @@ function createHome () {
 
   const homeParagraph = document.createElement('p');
   homeParagraph.classList.add('home-paragraph');
-  homeParagraph.textContent = 'Check out our menu below';
+  homeParagraph.textContent = 'Check out our menu below!';
 
   const homeImage = document.createElement('img');
   homeImage.classList.add('home-img');
