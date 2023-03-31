@@ -1,5 +1,6 @@
 import createHome from "./home";
 import createMenuWrapper from "./menu";
+import createContactWrapper from "./contact";
 
 function createNavItem (text, url, id) {
   const navItem = document.createElement('li');
@@ -71,12 +72,14 @@ function initWebsite() {
   homeSection.setAttribute('id', 'home'); // add ID to home section
   const menuSection = createMenuWrapper();
   menuSection.setAttribute('id', 'menu'); // add ID to menu section
+  const contactSection = createContactWrapper();
   const footerSection = createFooter();
 
   const content = document.getElementById('content');
   content.appendChild(navbar);
   content.appendChild(homeSection);
   content.appendChild(menuSection);
+  content.appendChild(contactSection);
   content.appendChild(footerSection);
 }
 
