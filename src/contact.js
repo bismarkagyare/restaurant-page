@@ -1,6 +1,6 @@
 function createItem(item) {
   const container = document.createElement('div');
-  container.classList.add(`${item.iconClass.split(' ')[0]}-container`);
+  container.classList.add(`${item.iconClass.split(' ')[1]}-container`);
 
   const icon = document.createElement('i');
   icon.classList.add(...item.iconClass.split(' '));
