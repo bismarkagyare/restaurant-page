@@ -35,7 +35,9 @@ body {
   color: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: italic;
-  /* height: 300px; */
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
 }
 
 a {
@@ -125,8 +127,6 @@ ul {
   gap: 1rem;
   padding: 1rem;
   width: 100%;
-  /* position: absolute;
-  bottom: 0; */
 }
 
 .fa-github {
@@ -153,8 +153,6 @@ ul {
 .menu-item {
   display: flex;
   gap: 1rem;
-  /* gap: 1rem 2rem;
-  max-width: 25rem; */
 }
 
 .menu-image {
