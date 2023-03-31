@@ -79,8 +79,8 @@ function initWebsite() {
   content.appendChild(navbar);
   content.appendChild(homeSection);
   content.appendChild(menuSection);
-  content.appendChild(contactSection);
   content.appendChild(footerSection);
+  content.appendChild(contactSection);
 }
 
 initWebsite();
