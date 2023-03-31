@@ -15,4 +15,11 @@ function createContact() {
   scheduleIcon.classList.add('fa fa-calender');
   const scheduleText = document.createElement('p');
   scheduleText.textContent = 'Monday-Friday: 8h-23h';
+
+  const phoneContainer = document.createElement('div');
+  phoneContainer.classList.add('phone-container');
+  const phoneIcon = document.createElement('i');
+  phoneIcon.classList.add('fa fa-phone');
+  const phoneText = document.createElement('p');
+  phoneText.textContent = '(060) 893 XXXX';
 }
