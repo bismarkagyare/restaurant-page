@@ -52,16 +52,20 @@ function createFooter() {
 function switchSection(id) {
   const homeSection = document.getElementById('home');
   const menuSection = document.getElementById('menu');
-  //const menuContainer = document.querySelector('.menu-container');
+  const contactSection = document.getElementById('contact');
 
   if (id === 'home') {
     homeSection.style.display = 'block';
     menuSection.style.display = 'none';
-    //menuContainer.hidden = true;
+    contactSection.style.display = 'none';
   } else if (id === 'menu') {
     homeSection.style.display = 'none';
     menuSection.style.display = 'block';
-    //menuContainer.classList.remove('hide-container');`
+    contactSection.style.display = 'none';
+  } else {
+    homeSection.style.display = 'none';
+    menuSection.style.display = 'none';
+    contactSection.style.display = 'block';
   }
 }
 
@@ -73,14 +77,15 @@ function initWebsite() {
   const menuSection = createMenuWrapper();
   menuSection.setAttribute('id', 'menu'); // add ID to menu section
   const contactSection = createContactWrapper();
+  contactSection.setAttribute('id', 'contact');
   const footerSection = createFooter();
 
   const content = document.getElementById('content');
   content.appendChild(navbar);
   content.appendChild(homeSection);
   content.appendChild(menuSection);
-  content.appendChild(footerSection);
   content.appendChild(contactSection);
+  content.appendChild(footerSection);
 }
 
 initWebsite();
