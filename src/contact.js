@@ -22,4 +22,24 @@ function createContact() {
   phoneIcon.classList.add('fa fa-phone');
   const phoneText = document.createElement('p');
   phoneText.textContent = '(060) 893 XXXX';
+
+  const mapImage = document.createElement('img');
+  mapImage.classList.add('map-image');
+  mapImage.src = 'images/location.jpg';
+  mapImage.alt = 'map-image';
+
+  locationContainer.appendChild(locationIcon);
+  locationContainer.appendChild(locationText);
+  scheduleContainer.appendChild(scheduleIcon);
+  scheduleContainer.appendChild(scheduleText);
+  phoneContainer.appendChild(phoneIcon);
+  phoneContainer.appendChild(phoneText);
+
+  contactContainer.appendChild(locationContainer);
+  contactContainer.appendChild(scheduleContainer);
+  contactContainer.appendChild(phoneContainer);
+  contactContainer.appendChild(mapImage);
+
+  return contactContainer;
 }
+
