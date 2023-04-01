@@ -12,7 +12,7 @@ function createHome () {
 
   const homeImage = document.createElement('img');
   homeImage.classList.add('home-img');
-  homeImage.src = 'images/menu-profile.jpg';
+  homeImage.src = 'images/menu-pic.jpg';
   homeImage.alt = 'home-img';
 
   const homeButton = document.createElement('button');
