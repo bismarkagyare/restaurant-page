@@ -17,17 +17,21 @@ function createNavbar() {
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
+  const navLinksWrapper = document.createElement('div');
+  navLinksWrapper.classList.add('navlinks-wrapper');
+
   const restaurantName = document.createElement('div');
   restaurantName.textContent = 'Riola';
   restaurantName.classList.add('restaurant-name');
-  nav.appendChild(restaurantName);
+  navLinksWrapper.appendChild(restaurantName);
 
   const navLinks = document.createElement('ul');
   navLinks.classList.add('nav-links');
   navLinks.appendChild(createNavItem('home', '#', 'home'));
   navLinks.appendChild(createNavItem('menu', '#', 'menu'));
   navLinks.appendChild(createNavItem('contact', '#', 'contact'));
-  nav.appendChild(navLinks);
+  navLinksWrapper.appendChild(navLinks);
+  nav.appendChild(navLinksWrapper);
 
   return nav;
 }
